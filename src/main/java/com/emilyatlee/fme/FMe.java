@@ -68,24 +68,19 @@ public class FMe extends JavaPlugin implements Listener {
         Map<Integer, String> messages = new HashMap<>();
         int totalWeight = 0;
         for(String key : messageKeys){
-            getLogger().info("key: " + key);
             int delta = this.getConfig().getInt("f-messages." + key);
             if(delta > 0) {
                 totalWeight += delta;
                 messages.put(totalWeight, key);
-                getLogger().info("added message: " + key + " @ " + totalWeight);
             }
         }
 
 
         int place = rand.nextInt(totalWeight+1);
-        getLogger().info("Rolled: " + place);
 
         String message = "";
         for(Map.Entry<Integer, String> entry : messages.entrySet()){
-            getLogger().info(place + " <= " + entry.getKey() + "?");
             if(place <= entry.getKey()){
-                getLogger().info("Yep!, choosing " + entry.getValue());
                 message = entry.getValue();
                 break;
             }
