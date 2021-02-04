@@ -1,0 +1,15 @@
+# default config.yml
+
+# delay is in game ticks (20 = 1 second)
+f-minDelay: 5
+f-maxDelay: 40
+
+# a prefix always attached to the f message
+f-prefix: <server>
+
+# possible f messages with their corresponding weights (higher number = more likely)
+f-messages:
+  f: 20
+  F: 5
+  ff: 2
+  lol: 1

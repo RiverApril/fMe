@@ -1,0 +1,7 @@
+name: fMe
+main: com.emilyatlee.fme.FMe
+version: 1.0
+commands:
+  fme.reload:
+    description: Reload fMe configs
+    usage: /<command>
